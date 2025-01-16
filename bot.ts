@@ -4,7 +4,7 @@ import {AbortSignal} from "grammy/out/shim.node";
 import {Other} from "grammy/out/core/api";
 
 // Create an instance of the `Bot` class and pass your bot token to it.
-const bot = new Bot("7841070391:AAGEfrWB53Rh4VcoQ-016KrYdgfA3vipLxw"); // <-- put your bot token between the ""
+const bot = new Bot(""); // <-- put your bot token between the ""
 
 // You can now register listeners on your bot object `bot`.
 // grammY will call the listeners when users send messages to your bot.
