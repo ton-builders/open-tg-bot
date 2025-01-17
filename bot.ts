@@ -1,9 +1,8 @@
-import {Bot} from "grammy";
-import type {LabeledPrice} from "grammy/out/types";
-import {AbortSignal} from "grammy/out/shim.node";
-import {Other} from "grammy/out/core/api";
+import {Bot, InlineQueryResultBuilder} from "grammy";
+import type {InlineQueryResult, LabeledPrice} from "grammy/out/types";
 
 // Create an instance of the `Bot` class and pass your bot token to it.
+// const bot = new Bot("7841070391:AAGEfrWB53Rh4VcoQ-016KrYdgfA3vipLxw"); // <-- put your bot token between the ""
 const bot = new Bot(""); // <-- put your bot token between the ""
 
 // You can now register listeners on your bot object `bot`.
@@ -108,7 +107,27 @@ bot.command("link", async (ctx) => {
 
 
 // Handle other messages.
-bot.on("message", (ctx) => ctx.reply("Got another message!"));
+bot.on("message", async (ctx) =>
+{
+    console.info(ctx.message)
+
+
+
+    const result = InlineQueryResultBuilder.contact(
+        "id",
+        "phone",
+        "first",
+        { last_name: "last" },
+    ).text("#Text", { parse_mode: "Markdown" });
+
+    let preparedInlineMessage = await ctx.savePreparedInlineMessage(result,{allow_user_chats:true, allow_bot_chats:true,allow_group_chats:true});
+    console.info(JSON.stringify(preparedInlineMessage))
+
+
+    await ctx.reply("Got another messag2e!")
+}
+
+);
 
 // Now that you specified how to handle messages, you can start your bot.
 // This will connect to the Telegram servers and wait for messages.
