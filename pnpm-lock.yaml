@@ -8,12 +8,24 @@ importers:
 
   .:
     dependencies:
+      '@grammyjs/conversations':
+        specifier: ^1.2.0
+        version: 1.2.0(grammy@1.34.0)
+      '@grammyjs/i18n':
+        specifier: ^1.0.1
+        version: 1.1.2(grammy@1.34.0)
+      '@grammyjs/menu':
+        specifier: ^1.2.1
+        version: 1.3.0(grammy@1.34.0)
       '@grammyjs/types':
         specifier: 3.18.0
         version: 3.18.0
       grammy:
         specifier: ^1.34.0
         version: 1.34.0
+      socks-proxy-agent:
+        specifier: ^8.0.5
+        version: 8.0.5
     devDependencies:
       '@types/debug':
         specifier: ^4.1.12
@@ -29,6 +41,44 @@ importers:
         version: 5.7.3
 
 packages:
+
+  '@deno/shim-deno-test@0.4.0':
+    resolution: {integrity: sha512-oYWcD7CpERZy/TXMTM9Tgh1HD/POHlbY9WpzmAk+5H8DohcxG415Qws8yLGlim3EaKBT2v3lJv01x4G0BosnaQ==}
+
+  '@deno/shim-deno-test@0.5.0':
+    resolution: {integrity: sha512-4nMhecpGlPi0cSzT67L+Tm+GOJqvuk8gqHBziqcUQOarnuIax1z96/gJHCSIz2Z0zhxE6Rzwb3IZXPtFh51j+w==}
+
+  '@deno/shim-deno@0.16.1':
+    resolution: {integrity: sha512-s9v0kzF5bm/o9TgdwvsraHx6QNllYrXXmKzgOG2lh4LFXnVMr2gpjK/c/ve6EflQn1MqImcWmVD8HAv5ahuuZQ==}
+
+  '@deno/shim-deno@0.18.2':
+    resolution: {integrity: sha512-oQ0CVmOio63wlhwQF75zA4ioolPvOwAoK0yuzcS5bDC1JUvH3y1GS8xPh8EOpcoDQRU4FTG8OQfxhpR+c6DrzA==}
+
+  '@fluent/bundle@0.17.1':
+    resolution: {integrity: sha512-CRFNT9QcSFAeFDneTF59eyv3JXFGhIIN4boUO2y22YmsuuKLyDk+N1I/NQUYz9Ab63e6V7T6vItoZIG/2oOOuw==}
+    engines: {node: '>=12.0.0', npm: '>=7.0.0'}
+
+  '@fluent/langneg@0.6.2':
+    resolution: {integrity: sha512-YF4gZ4sLYRQfctpUR2uhb5UyPUYY5n/bi3OaED/Q4awKjPjlaF8tInO3uja7pnLQcmLTURkZL7L9zxv2Z5NDwg==}
+    engines: {node: '>=12.0.0', npm: '>=7.0.0'}
+
+  '@grammyjs/conversations@1.2.0':
+    resolution: {integrity: sha512-d06nGFPlcea4UqjOcxCm5rwiV74bZQVUWQl3YVQp5TwC0oCHNK+PXgqaKkVgkfcYSMyx3dADRBuBkcGt+yiyDA==}
+    engines: {node: ^12.20.0 || >=14.13.1}
+    peerDependencies:
+      grammy: ^1.20.1
+
+  '@grammyjs/i18n@1.1.2':
+    resolution: {integrity: sha512-PcK06mxuDDZjxdZ5HywBhr+erEITsR816KP4DNIDDds1jpA45pfz/nS9FdZmzF8H6lMyPix3mV5WL1rT4q+BuA==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      grammy: ^1.10.0
+
+  '@grammyjs/menu@1.3.0':
+    resolution: {integrity: sha512-4T/xtNMJ25XD1BNWoQL4IProuvX5p1UGI6RS9vR7xaWn59/QxspqTGtT1orFRbCUjlOqkLJmpRSoQNxeO0Pdww==}
+    engines: {node: '>=12.20.0 || >=14.13.1'}
+    peerDependencies:
+      grammy: ^1.31.0
 
   '@grammyjs/types@3.18.0':
     resolution: {integrity: sha512-/VpQcT6Z0+Lw6H6jv2JvnDmqB1/9rjbFdDBlPBPUW3kQ1bWfjzfaiVk2+J2eiid3o3sLaPp3ZK0XjEI1gWNc3g==}
@@ -48,6 +98,10 @@ packages:
   abort-controller@3.0.0:
     resolution: {integrity: sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==}
     engines: {node: '>=6.5'}
+
+  agent-base@7.1.3:
+    resolution: {integrity: sha512-jRR5wdylq8CkOe6hei19GGZnxM6rBGwFl3Bg0YItGDimvjGtAvdZk4Pu6Cl4u4Igsws4a1fd1Vq3ezrhn4KmFw==}
+    engines: {node: '>= 14'}
 
   asynckit@0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
@@ -81,6 +135,20 @@ packages:
     resolution: {integrity: sha512-YSLUSLdwycufB0Si9em+Ef3aXt7Vq0LYuGgwF4+ZskPb6+3RzrPdkh28qQNKhCeIXKodgMKQ5CxAHf/fLJZufg==}
     engines: {node: ^12.20.0 || >=14.13.1}
 
+  ip-address@9.0.5:
+    resolution: {integrity: sha512-zHtQzGojZXTwZTHQqra+ETKd4Sn3vgi7uBmlPoXVWZqYvuKmtI0l/VZTjqGmJY9x88GGOaZ9+G9ES8hC4T4X8g==}
+    engines: {node: '>= 12'}
+
+  isexe@2.0.0:
+    resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
+
+  isexe@3.1.1:
+    resolution: {integrity: sha512-LpB/54B+/2J5hqQ7imZHfdU31OlgQqx7ZicVlkm9kzg9/w8GKLEcFfJl/t7DCEDueOyBAD6zCCwTO6Fzs0NoEQ==}
+    engines: {node: '>=16'}
+
+  jsbn@1.1.0:
+    resolution: {integrity: sha512-4bYVV3aAMtDTTu4+xsDYa6sy9GyJ69/amsu9sYF2zqjiEoZA5xJi3BrfX3uY+/IekIu7MwdObdbDWpoZdBv3/A==}
+
   mime-db@1.52.0:
     resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}
     engines: {node: '>= 0.6'}
@@ -101,6 +169,24 @@ packages:
       encoding:
         optional: true
 
+  o-son@1.0.4:
+    resolution: {integrity: sha512-tdGKxZgiTexSv97/igC2m8Y6FljgwvwHW/Zy3ql3Jx6MPKrPKaBDLhV7rz8uuLjcDPw6Pxa2PVsnWwen59MmnQ==}
+
+  smart-buffer@4.2.0:
+    resolution: {integrity: sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==}
+    engines: {node: '>= 6.0.0', npm: '>= 3.0.0'}
+
+  socks-proxy-agent@8.0.5:
+    resolution: {integrity: sha512-HehCEsotFqbPW9sJ8WVYB6UbmIMv7kUUORIF2Nncq4VQvBfNBLibW9YZR5dlYCSUhwcD628pRllm7n+E+YTzJw==}
+    engines: {node: '>= 14'}
+
+  socks@2.8.3:
+    resolution: {integrity: sha512-l5x7VUUWbjVFbafGLxPWkYsHIhEvmF85tbIeFZWc8ZPtoMyybuEhL7Jye/ooC4/d48FgOjSJXgsF/AJPYCW8Zw==}
+    engines: {node: '>= 10.0.0', npm: '>= 3.0.0'}
+
+  sprintf-js@1.1.3:
+    resolution: {integrity: sha512-Oo+0REFV59/rz3gfJNKQiBlwfHaSESl1pcGyABQsnnIfWOFt6JNj5gCog2U6MLZ//IGYD+nA8nI+mTShREReaA==}
+
   tr46@0.0.3:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
 
@@ -115,7 +201,54 @@ packages:
   whatwg-url@5.0.0:
     resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
 
+  which@2.0.2:
+    resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
+    engines: {node: '>= 8'}
+    hasBin: true
+
+  which@4.0.0:
+    resolution: {integrity: sha512-GlaYyEb07DPxYCKhKzplCWBJtvxZcZMrL+4UkrTSJHHPyZU4mYYTv3qaOe77H7EODLSSopAUFAc6W8U4yqvscg==}
+    engines: {node: ^16.13.0 || >=18.0.0}
+    hasBin: true
+
 snapshots:
+
+  '@deno/shim-deno-test@0.4.0': {}
+
+  '@deno/shim-deno-test@0.5.0': {}
+
+  '@deno/shim-deno@0.16.1':
+    dependencies:
+      '@deno/shim-deno-test': 0.4.0
+      which: 2.0.2
+
+  '@deno/shim-deno@0.18.2':
+    dependencies:
+      '@deno/shim-deno-test': 0.5.0
+      which: 4.0.0
+
+  '@fluent/bundle@0.17.1': {}
+
+  '@fluent/langneg@0.6.2': {}
+
+  '@grammyjs/conversations@1.2.0(grammy@1.34.0)':
+    dependencies:
+      debug: 4.4.0
+      grammy: 1.34.0
+      o-son: 1.0.4
+    transitivePeerDependencies:
+      - supports-color
+
+  '@grammyjs/i18n@1.1.2(grammy@1.34.0)':
+    dependencies:
+      '@deno/shim-deno': 0.18.2
+      '@fluent/bundle': 0.17.1
+      '@fluent/langneg': 0.6.2
+      grammy: 1.34.0
+
+  '@grammyjs/menu@1.3.0(grammy@1.34.0)':
+    dependencies:
+      grammy: 1.34.0
 
   '@grammyjs/types@3.18.0': {}
 
@@ -135,6 +268,8 @@ snapshots:
   abort-controller@3.0.0:
     dependencies:
       event-target-shim: 5.0.1
+
+  agent-base@7.1.3: {}
 
   asynckit@0.4.0: {}
 
@@ -166,6 +301,17 @@ snapshots:
       - encoding
       - supports-color
 
+  ip-address@9.0.5:
+    dependencies:
+      jsbn: 1.1.0
+      sprintf-js: 1.1.3
+
+  isexe@2.0.0: {}
+
+  isexe@3.1.1: {}
+
+  jsbn@1.1.0: {}
+
   mime-db@1.52.0: {}
 
   mime-types@2.1.35:
@@ -178,6 +324,27 @@ snapshots:
     dependencies:
       whatwg-url: 5.0.0
 
+  o-son@1.0.4:
+    dependencies:
+      '@deno/shim-deno': 0.16.1
+
+  smart-buffer@4.2.0: {}
+
+  socks-proxy-agent@8.0.5:
+    dependencies:
+      agent-base: 7.1.3
+      debug: 4.4.0
+      socks: 2.8.3
+    transitivePeerDependencies:
+      - supports-color
+
+  socks@2.8.3:
+    dependencies:
+      ip-address: 9.0.5
+      smart-buffer: 4.2.0
+
+  sprintf-js@1.1.3: {}
+
   tr46@0.0.3: {}
 
   typescript@5.7.3: {}
@@ -188,3 +355,11 @@ snapshots:
     dependencies:
       tr46: 0.0.3
       webidl-conversions: 3.0.1
+
+  which@2.0.2:
+    dependencies:
+      isexe: 2.0.0
+
+  which@4.0.0:
+    dependencies:
+      isexe: 3.1.1
