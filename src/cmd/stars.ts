@@ -16,9 +16,11 @@ export function bind_command_star(bot: Bot<MyContext>) {
 
   bot.on("pre_checkout_query", async function (ctx) {
     try {
+      console.info(ctx);
       return await ctx.answerPreCheckoutQuery(true);
     } catch (e) {
-      console.error("answerPreCheckoutQuery failed");
+      console.error("!!! answerPreCheckoutQuery failed !!! ");
+      console.error(e);
     }
   });
 
@@ -58,12 +60,24 @@ export function bind_command_star(bot: Bot<MyContext>) {
 
     return await ctx.api
       .refundStarPayment(userId, paidUsers.get(userId))
-      .then(() => {
+      .then(async () => {
         paidUsers.delete(userId);
-        return ctx.reply("Refund successful");
+        return await ctx.reply("Refund successful");
       })
       .catch(() => ctx.reply("Refund failed"));
   });
+
+  // bot.on("message:refunded_payment", async (ctx) => {
+  //   if (!ctx.message || !ctx.message.refunded_payment || !ctx.from) {
+  //     return;
+  //   }
+  //
+  //   let paymentChargeId =
+  //     ctx.message.refunded_payment.telegram_payment_charge_id;
+  //   await ctx.reply("Refunded ID: " + paymentChargeId);
+  //
+  //   console.log(paymentChargeId);
+  // });
 
   bot.command("link", async (ctx) => {
     const userId = ctx?.from?.id;

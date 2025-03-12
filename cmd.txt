@@ -1,0 +1,5 @@
+start - Start
+pay - Pay with Stars
+status - Status of Stars Payment
+refund - Refund of Stars Payment
+link - Generate a Invoice Link
