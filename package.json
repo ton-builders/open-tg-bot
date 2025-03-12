@@ -2,7 +2,7 @@
 	"name": "ton_master_bot",
 	"version": "1.0.0",
 	"scripts": {
-		"run_dev": "export BOT_TOKEN=6913454221: && export NODE_ENV=dev && export DEBUG='grammy*' && open https://t.me/DevTonMasterBot && nodemon src/entrypoint.local.ts",
+		"run_dev": "export BOT_TOKEN=7841070391:AAEiFrK06NwSN6zbfI9xvbc3V82OqJpZULw && export NODE_ENV=dev && export DEBUG='grammy*' && open https://t.me/open_tgbot && nodemon src/runtime.local.ts",
 		"wrangler_dev": "wrangler dev",
 		"deploy_dev": "wrangler deploy",
 		"test": "vitest"
@@ -22,6 +22,7 @@
 		"@types/debug": "^4.1.12",
 		"@types/node": "^12.20.55",
 		"@types/node-fetch": "2.6.2",
+		"prettier": "^3.5.3",
 		"typescript": "^5.7.3"
 	},
 	"packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321"
