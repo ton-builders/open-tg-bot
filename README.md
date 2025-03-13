@@ -4,10 +4,14 @@
 
 ## 本地环境执行
 
-'pnpm run run_dev' 运行本地热加载环境。 其中 nodemon 依赖 ts-node。
+'pnpm run run_dev' 运行本地热加载环境。
 
+本地运行需要安装 nodemon ，同时 nodemon 依赖 ts-node。
+
+```bash
 npm install -g nodemon
 npm install -g ts-node
+```
 
 ## Command
 
