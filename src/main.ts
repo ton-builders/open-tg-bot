@@ -1,6 +1,6 @@
 import { Bot } from "grammy";
 import { MyContext } from "./global.types";
-import { bind_command_star } from "./cmd/stars";
+import { bind_command_star } from "./stars/stars";
 import { on_message } from "./msg/on.message";
 import { bind_command_start } from "./cmd/start";
 import { on_callback_query_inline } from "./callback/query.inline";
