@@ -20,6 +20,9 @@ importers:
       '@grammyjs/types':
         specifier: 3.18.0
         version: 3.18.0
+      dotenv:
+        specifier: ^16.4.7
+        version: 16.4.7
       grammy:
         specifier: ^1.34.0
         version: 1.34.0
@@ -961,6 +964,10 @@ packages:
 
   devalue@4.3.3:
     resolution: {integrity: sha512-UH8EL6H2ifcY8TbD2QsxwCC/pr5xSwPvv85LrLXVihmHVC3T3YqTCIwnR5ak0yO1KYqlxrPVOA/JVZJYPy2ATg==}
+
+  dotenv@16.4.7:
+    resolution: {integrity: sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ==}
+    engines: {node: '>=12'}
 
   es-module-lexer@1.6.0:
     resolution: {integrity: sha512-qqnD1yMU6tk/jnaMosogGySTZP8YtUgAffA9nMN+E/rjxcfRQ6IEk7IiozUjgxKoFHBGjTLnrHB/YC45r/59EQ==}
@@ -1975,6 +1982,8 @@ snapshots:
     optional: true
 
   devalue@4.3.3: {}
+
+  dotenv@16.4.7: {}
 
   es-module-lexer@1.6.0: {}
 
