@@ -1,7 +1,7 @@
 import { Bot } from "grammy";
 import { MyContext } from "../global.types";
 
-export function bind_command_star(bot: Bot<MyContext>) {
+export function bind_command_stars(bot: Bot<MyContext>) {
   bot.command("pay", (ctx) =>
     ctx.replyWithInvoice(
       "Test Product", // Product title
@@ -101,5 +101,11 @@ export function bind_command_star(bot: Bot<MyContext>) {
     );
 
     return await ctx.reply(invoiceLink);
+  });
+
+  bot.command("txs", async (ctx) => {
+    let starTransactions = await ctx.api.getStarTransactions();
+
+    console.info(starTransactions);
   });
 }

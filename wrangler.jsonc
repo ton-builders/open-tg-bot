@@ -1,0 +1,13 @@
+/* #wrangler.jsonc */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "open-tg-bot",
+  "main": "src/runtime.cloudflare.ts",
+  "compatibility_date": "2025-03-13",
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "BOT_INFO": "{\"id\":7841070391,\"is_bot\":true,\"first_name\":\"Open TgBot\",\"username\":\"open_tgbot\",\"can_join_groups\":true,\"can_read_all_group_messages\":false,\"supports_inline_queries\":false,\"can_connect_to_business\":false,\"has_main_web_app\":false}"
+  }
+}
