@@ -9,8 +9,11 @@ export function bind_command_stars(bot: Bot<MyContext>) {
       "{'key':'value'}", // Product payload, not required for now
       "XTR", // Stars Currency
       [
-        { amount: 1, label: "Test Product" }, // Product variants
+        { amount: 100, label: "Test Product" }, // Product variants
       ],
+      // {
+      //   provider_token: "2051251535:TEST:OTk5MDA4ODgxLTAwNQ", // Add your token here
+      // },
     ),
   );
 
