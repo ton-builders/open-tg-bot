@@ -2,7 +2,7 @@
   "name": "ton_master_bot",
   "version": "1.0.0",
   "scripts": {
-    "run_dev": "export DEBUG='grammy*' && open https://t.me/open_tg_dev_bot && nodemon src/runtime.local.ts",
+    "run_dev": "export DEBUG='grammy*' && open https://t.me/TonBuilderBot && nodemon src/runtime.local.ts",
     "wrangler_dev": "wrangler dev",
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",

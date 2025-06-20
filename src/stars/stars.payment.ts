@@ -7,13 +7,13 @@ export function bind_command_stars(bot: Bot<MyContext>) {
       "Test Product", // Product title
       "Test description", // Product description
       "{'key':'value'}", // Product payload, not required for now
-      "XTR", // Stars Currency
+      "USD", // Stars Currency
       [
         { amount: 100, label: "Test Product" }, // Product variants
       ],
-      // {
-      //   provider_token: "2051251535:TEST:OTk5MDA4ODgxLTAwNQ", // Add your token here
-      // },
+      {
+        provider_token: "2051251535:TEST:OTk5MDA4ODgxLTAwNQ", // Add your token here
+      },
     ),
   );
 
@@ -70,17 +70,17 @@ export function bind_command_stars(bot: Bot<MyContext>) {
       .catch(() => ctx.reply("Refund failed"));
   });
 
-  // bot.on("message:refunded_payment", async (ctx) => {
-  //   if (!ctx.message || !ctx.message.refunded_payment || !ctx.from) {
-  //     return;
-  //   }
-  //
-  //   let paymentChargeId =
-  //     ctx.message.refunded_payment.telegram_payment_charge_id;
-  //   await ctx.reply("Refunded ID: " + paymentChargeId);
-  //
-  //   console.log(paymentChargeId);
-  // });
+  bot.on("message:refunded_payment", async (ctx) => {
+    if (!ctx.message || !ctx.message.refunded_payment || !ctx.from) {
+      return;
+    }
+
+    let paymentChargeId =
+      ctx.message.refunded_payment.telegram_payment_charge_id;
+    await ctx.reply("Refunded ID: " + paymentChargeId);
+
+    console.log(paymentChargeId);
+  });
 
   bot.command("link", async (ctx) => {
     const userId = ctx?.from?.id;
