@@ -7,12 +7,12 @@ export function bind_command_stars(bot: Bot<MyContext>) {
       "Test Product", // Product title
       "Test description", // Product description
       "{'key':'value'}", // Product payload, not required for now
-      "USD", // Stars Currency
+      "XTR", // Stars Currency
       [
         { amount: 100, label: "Test Product" }, // Product variants
       ],
       {
-        provider_token: "2051251535:TEST:OTk5MDA4ODgxLTAwNQ", // Add your token here
+        // provider_token: "2051251535:TEST:OTk5MDA4ODgxLTAwNQ", // Add your token here
       },
     ),
   );
