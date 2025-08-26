@@ -19,6 +19,6 @@ export interface SessionData {
 
 export type MyContext = Context &
   I18nFlavor &
-  ConversationFlavor & {
+  ConversationFlavor<any> & {
     config: BotConfig;
   } & SessionFlavor<SessionData>;

@@ -6,7 +6,7 @@ export function menu_markup_demo(bot: Bot<MyContext>) {
   let withPleasure = "*Menu Demo* : Sub Menu with Back Button\\!";
   const menu_home = new Menu<MyContext>("menu_home")
     .submenu("A", "menu_wallets", async (ctx) => {
-      await ctx.editMessageText("This is submenu of A.").then((r) => {});
+      await ctx.editMessageText("This is submenu of A.");
     })
     .submenu("B", "menu_explorers")
 
@@ -47,7 +47,7 @@ export function menu_markup_demo(bot: Bot<MyContext>) {
         parse_mode: "MarkdownV2",
         reply_markup: menu_home,
       })
-      .catch((reason) => {
+      .catch((reason: Error) => {
         console.error(reason);
       });
   });
